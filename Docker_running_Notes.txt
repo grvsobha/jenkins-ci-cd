@@ -1,0 +1,243 @@
+Containerzation Tool
+===================
+Docker Rancher
+
+What Docker
+===========
+
+
+Pre-req
+===========
+Linux OS- AWS Account
+Docker installation - completed
+
+Jenkins - Working process
+================
+git
+java
+maven
+Jenkins
+
+Mintain the code
+==============
+Github
+
+Docker
+==========
+Docke hub
+ docker account
+
+Docker image
+======
+
+Dokcer container
+
+Docker Image
+============
+2 ways
+1. google - docker image
+2. Customized dockerfile
+
+Own Docker hub accountt
+============
+java1.8
+install java1.8
+
+dockerfile
+===========
+java image
+1.google
+2.dockerfile
+
+install git in dockerfile using centos OS
+==================================
+FROM cents
+
+Execution Part
+=========
+1. Creating/build the image
+
+docker build -t dockerimage .
+
+2. create the container
+
+docker run -itd --name myc1 -p 8080:80 centos1 
+
+
+docker exec -it containername/id /bin/bash
+cd /data
+git --version
+
+Execution Process
+============
+dockerfile
+
+Build the image
+===========
+docker build -t git .
+
+creating the container
+==============
+docker run -itd --name myc3 -p 8181:80 git
+docker ps
+
+go inside the container
+============
+docker exec -it containername/id /bin/bash
+
+Env
+=======
+1. Dev Env  - (2 Diff, Frontend env - 
+2. UAT/SAT 
+3. Pre-prod
+4. Prod deployment
+
+
+1. Devlopers - c, C++, Java, node.js, .Net - 100 lines - index.html, web server
+2. test - test team (maunaul/ Automation(selienum, cucumber, load testing, permonace testing)
+3. n/w - team
+4. OS - Linux
+5. Database - MongoDB, DynamoDB, NOSql, Mysql, MSSQL, AMaazon Arora, RDS
+5. Github - DevOps(Cloud)
+
+DevOps & Cloud 
+===========
+CD - Jenkins, Docker, K8S, Ansible
+
+CD -
+
+Dockerfile
+------------
+NGINX
+
+END TO END Nginx deployment
+===============
+
+os -Centos
+yum install
+
+ubunutu
+=========
+apt-get install git -y
+
+FROM ubuntu
+MAINTAINER shobha
+RUN apt-get update -y
+RUN apt-get install -y nginx
+COPY index.html /var/www/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+
+Exe:
+=====
+docker build -t nginx .
+
+container
+======
+docker run -itd --name mynginx -p 8080:80 nginx /bin/bash
+
+
+docker tag nginx z12bsobh/nginx
+docker push z12bsobh/nginx:latest
+
+Networking
+=============
+
+How many Types
+
+
+CI-CD Implementattion
+================
+Jenkins - Groovy Script using Declarative pipeline
+
+CI - Jenkins
+CD - Docker
+
+Docker - server
+==============
+CI - Impelementation
+
+Jenkins- master 
+============
+docker server 
+
+Dockerfile to execute jenkins server
+=============
+
+# create a directory
+mkdir docker
+cd docker
+# copy the .war file into current directory
+cp /var/lib/jenkins/workspace/package/target/addressbook.war .
+#create dockerfile
+touch dockerfile
+cat <<EOT>> dockerfile
+FROM tomcat
+ADD addressbook.war /user/local/tomcat/webapps
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
+EOT
+sudo docker build -t myproject:$BUILD_NUMBER .
+sudo docker run -dt -P  myproject:$BUILD_NUMBER
+
+
+Docker- MicroServices
+=======================
+
+To see one job app
+==================
+1. Dev - Java, c, c++,php
+2. Backend - DB
+3. n/w
+4. OS - Linux
+frontend code - deployment (dockerfile, jenkins automation)
+backend - db - schema, query, username & password
+frontend code
+backd db - username credentails
+
+deployment backend, db deplyment
+==========================
+micro services
+multiple containers
+db- service
+dockerfile - services
+n/w
+
+Docker-Compose
+===============
+yaml file
+vim docker-compose.yml
+
+Wordpress
+---------------
+PHP
+mysql
+n/w
+
+vim Docker-compose.yml
+==========================
+
+service: mysql
+  dbname
+  n/w
+
+dependecies"
+   "db"
+    PHP 
+    n/w
+     port
+
+wordpress
+   port
+   username
+  password
+  n/w
+
+
+
+
+
+
+
+
+
